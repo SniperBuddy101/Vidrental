@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to Vidrental!</h1>
+  <p class="lead">You can check the Movies, their genres, whether they are in stock and their rates!</p>
+  <hr class="my-4">
+  <p>So, what are you waiting for?</p>
+  <a class="btn btn-primary btn-lg" href="{% url "vidrental:index" %}  " role="button">Browse the Collection</a>
+</div>
+
+{% endblock %}

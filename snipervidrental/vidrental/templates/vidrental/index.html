@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table table-striped container">
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Stock</th>
+    <th>Rate</th>
+    {% for movie in movie_list %}
+    <tr>
+        <td><a href="{% url "vidrental:detail" movie.pk %}"> {{ movie.movie_name }}</a></td>
+        <td>{{ movie.genre }}</td>
+        <td>{{ movie.stock }}</td>
+        <td>{{ movie.rate }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
